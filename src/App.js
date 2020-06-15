@@ -1,12 +1,16 @@
-import React from 'react';
-import './App.css';
-import './components/MyHeader';
-import MyHeader from './components/MyHeader';
+import React from "react";
+import { BrowserRouter , Route } from "react-router-dom";
+import "./App.css";
+import MyHeader from "./containers/MyHeader";
+import MyBody from "./containers/MyBody";
 
 function App() {
   return (
-    <div className="App">
-      <MyHeader/>
+    <div>
+      <MyHeader />
+      <BrowserRouter >
+        <Route path="/" exact component={MyBody} />
+      </BrowserRouter >
     </div>
   );
 }
